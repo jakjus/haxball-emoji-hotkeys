@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
+
+#wrapper {
+  font-size: 15px;
+  margin: 0px 0px 20px 0px;
+  width: 320px;
+  max-height: 606px;
+}
+
+.key {
+  z-index: 1;
+  background: rgb(250,250,250);
+  padding: 2px 9px;
+  cursor: pointer;
+}
+
+.hotkey {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 6px;
+  width: 94px;
+  text-align: center;
+  padding: 6px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  border-radius: 2px;
+  background: rgb(244,244,244);
+}
+
+#activeEmojis {
+  display: flex;
+  flex-wrap: wrap
+}
+
+#addNewEmoji {
+  padding: 10px, 2px;
+}
+
+.emoji {
+  display: block;
+  font-size: 42px;
+  cursor: pointer;
+}
+
+.remove {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.emojichooser {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+  width: 290px;
+  margin: 12px;
+  border-radius: 4px;
+  border: solid 1px rgb(240,240,240);
+  padding: 8px 16px;
+  background: rgb(243,243,243);
+}
+
+.singleEmoji {
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body style="overflow:hidden;">
+    <div id="wrapper">
+      <div id="activeEmojis"></div>
+      <div style="display: flex;">
+        <div style="flex: 1; justify-content: center; align-items: center; display: flex;">
+          <button id="addNewEmoji">Add Hotkey</button>
+        </div>
+        <div style="flex: 1; justify-content: center; align-items: center; display: flex;">
+        <div class="hotkey"><span>Default:</span><span id="defaultEmoji" class="emoji"></span></div>
+        </div>
+      </div>
+      <script src="popup.js"></script>
+    </div>
+  </body>
+</html>

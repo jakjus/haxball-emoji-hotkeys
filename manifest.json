@@ -1,0 +1,19 @@
+{
+  "name": "HaxBall Emoji Hotkeys",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": { "16": "images/favicon.png" },
+  "content_scripts": [
+   {
+     "matches": ["https://*.haxball.com/play*"],
+     "js": ["content-script.js"]
+   }
+  ],
+  "action": {
+        "default_popup": "popup.html"
+  }
+}

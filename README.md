@@ -1,6 +1,4 @@
-## Haxball Emoji Hotkeys
-
-![Logo](images/logo128.png)
+## Haxball Emoji Hotkeys ![Logo](images/favicon.png)
 
 Make hotkeys with cool avatar emojis in HaxBall! 
 
@@ -23,4 +21,6 @@ Extension is during acceptation phase in Chrome Web Store. Link will be uploaded
 5. Choose the cloned folder
 
 ## Contributing
-It's been a few years since I've done anything with Vanilla JS DOM Manipulation. The code **has to** be cleaned up. I'll try to do it ASAP. Please feel free to do any kind of PRs, but the ones **structuring/cleaning** the code are most welcome.
+It's been a few years since I've done anything with Vanilla JS DOM Manipulation. I'll try to clean up the code ASAP. 
+
+Please feel free to do any kind of PRs, but the ones **structuring/cleaning** the code are most welcome.

@@ -2,7 +2,7 @@
   "name": "HaxBall Emoji Hotkeys",
   "version": "0.1",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "storage"],
   "background": {
     "service_worker": "background.js"
   },

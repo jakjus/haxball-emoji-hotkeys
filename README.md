@@ -22,5 +22,7 @@ Extension is during acceptation phase in Chrome Web Store. Link will be uploaded
 
 ## Contributing
 It's been a few years since I've done anything with Vanilla JS DOM Manipulation. I'll try to clean up the code ASAP. 
+Please feel free to do any kind of Pull Requests.
 
-Please feel free to do any kind of PRs, but the ones **structuring/cleaning** the code are most welcome.
+## License
+[MIT](./LICENSE)

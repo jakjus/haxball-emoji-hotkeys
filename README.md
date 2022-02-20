@@ -10,10 +10,9 @@ Bind emojis to the keys. They will be shown as your avatar in-game at https://ha
 
 ## Usage
 
-#### Official
-Extension is during acceptation phase in Chrome Web Store. Link will be uploaded here, when accepted.
+Add to your browser from [Chrome Web Store](https://chrome.google.com/webstore/detail/haxball-emoji-hotkeys/ifppaafaogoopidaihgfkgfopocjojdl)!
 
-#### Unofficial/dev
+## Development
 1. Clone the repository
 2. Go to `chrome://extensions` in Google Chrome
 3. Enable developer mode

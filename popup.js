@@ -51,32 +51,43 @@ emojiArray.map(e => {
 
 let chooserOpen = false
 
+function chooseAndClose(e, eh, emojichooser) {
+  let peh = eh.parentElement
+  let choice = e.innerText || e.value  // It can be text or emoji
+  peh.querySelector('.emoji').innerText = choice
+  let currentKeyElem = peh.querySelector('.key')
+  if (currentKeyElem){
+    let currentKey = currentKeyElem.innerText
+    chrome.storage.sync.get("emojis", ({ emojis })  => {
+      emojis[currentKey] = e.innerText || e.value
+      chrome.storage.sync.set({ emojis })
+    })
+  } else {
+    chrome.storage.sync.get("defaultEmoji", ({ defaultEmoji })  => {
+      defaultEmoji = e.innerText || e.value
+      chrome.storage.sync.set({ defaultEmoji })
+    })
+  }
+  chooserOpen = false; 
+  emojichooser.remove();
+}
+
 function handleEmojiClick(e) {
   eh = e.target
   if (!chooserOpen){
     chooserOpen = !chooserOpen
     list = document.createElement("div")
-    list.innerHTML = `<div class="emojichooser"><img class="remove" src="images/x.png"></img></div>`
-    emojiNodes.map(e => {
-      list.querySelector('.emojichooser').appendChild(e)
-      e.addEventListener("click", () => {
-        let peh = eh.parentElement
-        peh.querySelector('.emoji').innerText = e.innerText 
-        let currentKeyElem = peh.querySelector('.key')
-        if (currentKeyElem){
-        let currentKey = currentKeyElem.innerText
-          chrome.storage.sync.get("emojis", ({ emojis })  => {
-            emojis[currentKey] = e.innerText
-            chrome.storage.sync.set({ emojis })
-          })
-        } else {
-          chrome.storage.sync.get("defaultEmoji", ({ defaultEmoji })  => {
-            defaultEmoji = e.innerText
-            chrome.storage.sync.set({ defaultEmoji })
-          })
-        }
-        chooserOpen = false; 
-        e.parentElement.remove()
+    list.innerHTML = `<div class="emojichooser"><input id="textemoji"></input><img class="remove" src="images/x.png"></img></div>`
+    input = list.querySelector('#textemoji')
+    input.addEventListener("input", (e) => {
+      if (e.target.value.length > 1){
+        chooseAndClose(e.target, eh, input.parentElement)
+      }
+    })
+    emojiNodes.map(emoji => {
+      list.querySelector('.emojichooser').appendChild(emoji)
+      emoji.addEventListener("click", (emojiInList) => {
+        chooseAndClose(emojiInList.target, eh, emoji.parentElement)
       }) 
     })
     eh.parentElement.parentElement.parentElement.parentElement.appendChild(list)

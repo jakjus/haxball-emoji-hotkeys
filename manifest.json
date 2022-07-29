@@ -1,6 +1,6 @@
 {
   "name": "HaxBall Emoji Hotkeys",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "manifest_version": 3,
   "permissions": ["storage"],
   "background": {
